@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CJM Portfolio | Home</title>
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon" />
+
+    <!--CSS & JS-->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <nav class="navbar">
+      <a class="nav-logo" href="index.html"
+        ><img src="images/nav-image.png"
+      /></a>
+
+      <ul class="nav-group">
+        <li class="nav-item">
+          <a onclick="openHome()" class="nav-link">Home</a>
+        </li>
+        <li class="nav-item">
+          <a onclick="openAbout()" class="nav-link">About</a>
+        </li>
+        <li class="nav-item">
+          <a onclick="openGallery()" class="nav-link">Gallery</a>
+        </li>
+        <li class="nav-item">
+          <a onclick="openProjects()" class="nav-link">Projects</a>
+        </li>
+        <li class="nav-item">
+          <a onclick="openContact()" class="nav-link">Contact</a>
+        </li>
+      </ul>
+      <div class="hamburger">
+        <span class="line"></span>
+        <span class="line"></span>
+        <span class="line"></span>
+      </div>
+    </nav>
+
+    <main class="container">
+      <div class="content">
+        <div class="content-box">
+          <h4>carl justine malabanan</h4>
+
+          <p>web developer and video editor</p>
+          <button class="btn-learn-more" onclick="openAbout()">
+            About Me >
+          </button>
+        </div>
+      </div>
+      <div class="myImage"></div>
+    </main>
+
+    <script type="text/javascript" src="script.js"></script>
+  </body>
+</html>

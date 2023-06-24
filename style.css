@@ -1,0 +1,216 @@
+@import url("https://fonts.googleapis.com/css2?family=Archivo+Black&family=Manrope&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Manrope", sans-serif;
+  list-style: none;
+  text-decoration: none;
+}
+
+body {
+  background: linear-gradient(85deg, #2a2a72, #009ffd);
+  height: 100vh;
+}
+.navbar {
+  width: 100%;
+  height: 80px;
+  background: linear-gradient(85deg, #2a2a72, #009ffd);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 24px;
+  animation: nav-bar-load 400ms ease-in;
+}
+.nav-group {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 50px;
+  gap: 60px;
+  cursor: pointer;
+  transition: 0.6s ease-in;
+}
+.nav-logo img {
+  width: 30px;
+  height: auto !important;
+  margin-left: 30px;
+}
+
+.nav-link {
+  color: #eaf6ff;
+  transition: 0.5s ease;
+  font-size: 1.5rem;
+  font-weight: 800;
+  border-radius: 50%;
+}
+
+.nav-link:hover {
+  color: #ffa400;
+}
+
+.hamburger {
+  display: none;
+  cursor: pointer;
+}
+
+.line {
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 5px auto;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.6s ease-in-out;
+  background-color: #eaf6ff;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 80vh;
+}
+.container .content {
+  width: 60%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.content-box {
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+  padding: 0 80px;
+
+  display: block;
+  animation: nameMove 0.6s ease-in;
+}
+.container .content .content-box h4 {
+  color: #eaf6ff;
+  font-size: 3rem;
+  letter-spacing: 3px;
+  font-family: "Archivo Black", sans-serif;
+  text-transform: uppercase;
+  transition: 0.3s;
+  margin-bottom: 20px;
+}
+.container .content .content-box p {
+  color: #eaf6ff;
+  font-size: 2rem;
+  letter-spacing: 3px;
+  font-family: "Archivo Black", sans-serif;
+  text-transform: uppercase;
+  transition: 0.3s;
+  margin-bottom: 20px;
+}
+.content-box .btn-learn-more {
+  width: 150px;
+  height: 50px;
+  font-size: 1.45em;
+
+  border: 1px solid #eaf6ff;
+  color: #eaf6ff;
+  cursor: pointer !important;
+  background: linear-gradient(to right, #ffa400 50%, transparent 50%);
+  background-size: 200% 100%;
+  background-position: right bottom;
+  transition: all 0.5s ease-out;
+}
+.content-box .btn-learn-more:hover {
+  color: #232528;
+  background-position: left bottom;
+}
+@media (max-width: 900px) {
+  .nav-group {
+    gap: 20px;
+  }
+}
+@media (max-width: 768px) {
+  .hamburger {
+    display: block;
+  }
+
+  .hamburger.active .line:nth-child(2) {
+    opacity: 0;
+  }
+  .hamburger.active .line:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+  .hamburger.active .line:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+
+  .nav-group {
+    position: fixed;
+
+    top: 70px;
+    left: -800px;
+    gap: 0;
+    flex-direction: column;
+    /* background-color: #232528; */
+    background: linear-gradient(85deg, #2a2a72, #009ffd);
+    width: 100%;
+    text-align: center;
+    transition: 400ms;
+    opacity: 0;
+  }
+
+  .nav-item {
+    margin: 10px 0;
+  }
+  .nav-link {
+    font-size: 1.3rem;
+  }
+
+  .nav-group.active {
+    left: 0px;
+    opacity: 1;
+  }
+  .content-box {
+    width: 100%;
+    padding: 0 70px;
+  }
+  .container .content .content-box h4 {
+    letter-spacing: 5px;
+    font-size: 32px;
+  }
+  .container .content .content-box p {
+    font-size: 20px;
+  }
+}
+@media (max-width: 500px) {
+  .content-box {
+    width: 100%;
+    padding: 0 70px;
+  }
+  .container .content .content-box h4 {
+    letter-spacing: 5px;
+    font-size: 20px;
+  }
+  .container .content .content-box p {
+    font-size: 16px;
+  }
+}
+@keyframes nav-bar-load {
+  0% {
+    opacity: 0;
+    transform: translateY(-100%);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes nameMove {
+  0% {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
