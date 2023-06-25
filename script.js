@@ -15,27 +15,27 @@ document.querySelectorAll(".nav-link").forEach((n) =>
   })
 );
 
-function openHome() {
+const openHome = () => {
   let openH = window.open("index.html", "_self");
   console.log("Opened Home: " + openH);
-}
+};
 
-function openAbout() {
+const openAbout = () => {
   let openA = window.open("about.html", "_self");
   console.log("Opened About: " + openA);
-}
+};
 
-function openGallert() {
+const openGallert = () => {
   let openG = window.open("gallery.html", "_self");
   console.log("Opened Gallery: " + openG);
-}
+};
 
-function openProjects() {
+const openProjects = () => {
   let openP = window.open("projects.html", "_self");
   console.log("Opened Projects: " + openP);
-}
+};
 
-function openContact() {
+const openContact = () => {
   let openC = window.open("contact.html", "_self");
   console.log("Opened Contacts: " + openC);
-}
+};
